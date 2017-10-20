@@ -75,6 +75,24 @@
 
     <access origin="*"/>
 
+  <access origin="http://google.com" />
+  <access origin="https://google.com" />  
+
+  <access origin="http://maps.google.com" />
+  <access origin="http://maps.google.com/*" />
+  <access origin="http://*.google.com" />
+
+
+  <access origin="*" />
+  <access origin="*.google.com"/>
+  <access origin="*.googleapis.com"/>
+  <access origin="*.gstatic.com"/>
+
+  <allow-navigation href="*" />
+  <allow-navigation href="http://*/*" />
+  <allow-navigation href="https://*/*" />
+  <allow-navigation href="data:*" />
+
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->

@@ -11,7 +11,7 @@
   <style type="text/css">
     #map{
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     background: #D1D0CE;
     }
     #getlocation{
@@ -39,8 +39,6 @@
   <script src="js/app/app.js"></script>
   <script src="js/app/bootstrap.js"></script>
   <script src="js/lib/jquery.mobile.js"></script>
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDG0f5b69H-VMYH31cEnJypzfMDjDTyrBI" async defer></script>
-
   </head>
   <body>
     
@@ -57,19 +55,24 @@
     	</div><!-- /content -->
 
     	<div data-role="footer">
-    		<h4>All rights reserved @pages</h4>
+    		<h4>Footer content</h4>
     	</div><!-- /footer -->
 
     </div><!-- /page -->
 
     <script type="text/javascript">
+
+      $(document).ready(function () {
+         document.addEventListener("deviceready", onDeviceReady, true); 
+    });
+
       // Since we will be making use of 3rd party functions (eg. navigator.geolocation.getCurrentPosition) which are not native javascript functions we will need
 // to add this function to the list of native javascript functions to allow javascript identify and execute it each time its called.
 // This is done by using the addEventListener() function.
 //
 var longitude;
 var latitude;
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 
 
 //We decide to create a function to handle the 3rd party functions (eg. navigator.geolocation.getCurrentPosition)
@@ -117,5 +120,8 @@ function addMarker(){
           });
 }
     </script>
+
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyDG0f5b69H-VMYH31cEnJypzfMDjDTyrBI"></script>
+
   </body>
 </html>
